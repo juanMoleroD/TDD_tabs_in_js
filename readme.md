@@ -7,6 +7,4 @@ To try the code:
 ----------------
 
 1. Install Node
-2. Install Jakejs
-
-3. In the main folder type 'jake' in the terminal.
+2. In the main folder type 'node_modules/.bin/jake' in the terminal.
