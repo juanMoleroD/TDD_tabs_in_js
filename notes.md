@@ -12,3 +12,5 @@ Note: sh is for Unix and cmd is for windows.
 5. on Windows, adding '@echo off' it should not print the commands. 
 
 Note: In windows, if there is a script, you need to use call before every command. 
+
+Note: to run sh comands, use "./filename.sh"

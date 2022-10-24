@@ -1,6 +1,9 @@
 {
   "name": "y",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.3.0"
+  },
   "description": "How To: Tabs ============",
   "main": "Jakefile.js",
   "scripts": {
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/juanMoleroD/TDD_tabs_in_js#readme",
   "devDependencies": {
-    "jake": "^10.8.5"
+    "jake": "^10.8.5",
+    "semver": "^7.3.8"
   }
 }
