@@ -1,6 +1,7 @@
 (function() {
     "use strict";
 
+    const semver = require("semver");
     
     desc("Description of the task"); // makes this selfdocumenting
     task("default", [ "version" ], function() { // task takes 3 args (name, dependency tasks, function to execute)
@@ -15,7 +16,8 @@
         const expectedVersion = "v" + packageJson.engines.node;
         
         let actualVersion = process.version;
-        if (actualVersion !== expectedVersion) {
+        //if (actualVersion !== expectedVersion) 
+        if (semver.neq(expectedVersion, actualVersion)) {
             fail("Incorrect Node version: expected " + expectedVersion + ", but was " + actualVersion);
         }
     });
