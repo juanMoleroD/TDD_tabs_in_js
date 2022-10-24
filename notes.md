@@ -10,3 +10,5 @@ Note: sh is for Unix and cmd is for windows.
 4. on Unix you need to ad the Shaban at the start to specify where the script is to be ran. In this case '#!/bin/sh' by default is the default terminal.
 
 5. on Windows, adding '@echo off' it should not print the commands. 
+
+Note: In windows, if there is a script, you need to use call before every command. 
