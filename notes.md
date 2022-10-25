@@ -1,4 +1,4 @@
-Setting up a script file:
+## Setting up a script file:
 
 1. by convention apend .sh at the end on Unix or .cmd in windows.
 2. In Unix, to run the file needs to have permissions. use 'chmod +x jake.sh' to allow it to run. No permissions are required in windows.
@@ -14,3 +14,9 @@ Note: sh is for Unix and cmd is for windows.
 Note: In windows, if there is a script, you need to use call before every command. 
 
 Note: to run sh comands, use "./filename.sh"
+
+## Linting using jsHint
+
+files start with a IIFE (Imediatelly Invoked Function Expression). This ensures nothing run in the global scope. Node does it by default but just in case.
+
+"use strict" is for runtame error checking 
