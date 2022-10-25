@@ -1,4 +1,4 @@
-
+/* globals desc: false, task: false, complete: false, fail: false */
 (function() {
     "use strict";
 
@@ -32,7 +32,21 @@
 
         jshint.checkFiles({
             files: "Jakefile.js",
-            options: {esversion: 6}, // added esversion to remove errors from using es6 const, let, etc
+            options: {
+                bitwise: true, // removes bitoperators ^ & |
+                eqeqeq: true, // enforces deep equalityn
+                freeze : true, // does not allow for overwriding built in functions
+                latedef: "nofunc", // to allow function hoisting but not using variables before they are defined
+                nocomma: true,
+                nonew: true,
+                strict: true,
+                undef: true, // does not allow undefined, requires globals definition at the top
+                varstmt: true,
+
+                node: true,
+                browser: true,
+                esversion: 6 // added esversion to remove errors from using es6 const, let, etc
+            }, 
             globals: {}
         }, complete, fail); // complete is async
         
