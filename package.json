@@ -22,6 +22,7 @@
   "devDependencies": {
     "jake": "^10.8.5",
     "jshint": "^2.13.5",
-    "semver": "^7.3.8"
+    "semver": "^7.3.8",
+    "simplebuild": "^0.5.3"
   }
 }

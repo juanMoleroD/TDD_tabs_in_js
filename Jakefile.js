@@ -27,8 +27,8 @@
     desc("Lint the code");
     task("lint", function() {
         console.log("Linting Js: .");
-        // config to run linting
+        // config to run linting, but this is a fallback, this is slower
         jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
     });
-    
+
 } ());
