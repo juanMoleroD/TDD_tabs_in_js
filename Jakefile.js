@@ -6,7 +6,7 @@
     // makes this selfdocumenting
     desc("Description of the task"); 
     // task takes 3 args (name, dependency tasks, function to execute)
-    task("default", [ "version" ], function() { 
+    task("default", [ "version", "lint" ], function() { 
         console.log("\n\nBUILD Ok");
     });
     
@@ -23,4 +23,12 @@
             fail("Incorrect Node version: expected " + expectedVersion + ", but was " + actualVersion);
         }
     });
+
+    desc("Lint the code");
+    task("lint", function() {
+        console.log("Linting Js: .");
+        // config to run linting
+        jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
+    });
+    
 } ());
