@@ -2,6 +2,7 @@
     "use strict";
 
     const semver = require("semver");
+    const jshint = require("simplebuild-jshint");
     
     // makes this selfdocumenting
     desc("Description of the task"); 
@@ -27,8 +28,14 @@
     desc("Lint the code");
     task("lint", function() {
         console.log("Linting Js: .");
+        // jshint.checkFiles({
+        //     files: "Jakefile.js",
+        //     options: {},
+        //     globals: {}
+        // }, complete, fail); // complete is async
+        
         // config to run linting, but this is a fallback, this is slower
         jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
-    });
+    }, { async: true });
 
 } ());
