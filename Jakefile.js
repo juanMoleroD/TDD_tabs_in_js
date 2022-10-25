@@ -1,3 +1,4 @@
+
 (function() {
     "use strict";
 
@@ -28,14 +29,15 @@
     desc("Lint the code");
     task("lint", function() {
         console.log("Linting Js: .");
-        // jshint.checkFiles({
-        //     files: "Jakefile.js",
-        //     options: {},
-        //     globals: {}
-        // }, complete, fail); // complete is async
+
+        jshint.checkFiles({
+            files: "Jakefile.js",
+            options: {esversion: 6}, // added esversion to remove errors from using es6 const, let, etc
+            globals: {}
+        }, complete, fail); // complete is async
         
         // config to run linting, but this is a fallback, this is slower
-        jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
+        // jake.exec("node node_modules/jshint/bin/jshint Jakefile.js", { interactive: true }, complete);
     }, { async: true });
 
 } ());
