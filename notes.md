@@ -20,3 +20,5 @@ Note: to run sh comands, use "./filename.sh"
 files start with a IIFE (Imediatelly Invoked Function Expression). This ensures nothing run in the global scope. Node does it by default but just in case.
 
 "use strict" is for runtame error checking 
+
+Added a ".jshintrc" file at the top of the project to remove errors about using ES6 functionality (let, consts, etc).

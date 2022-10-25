@@ -3,16 +3,18 @@
 
     const semver = require("semver");
     
-    desc("Description of the task"); // makes this selfdocumenting
-    task("default", [ "version" ], function() { // task takes 3 args (name, dependency tasks, function to execute)
+    // makes this selfdocumenting
+    desc("Description of the task"); 
+    // task takes 3 args (name, dependency tasks, function to execute)
+    task("default", [ "version" ], function() { 
         console.log("\n\nBUILD Ok");
     });
     
-    desc("Check Node Version")
+    desc("Check Node Version");
     task("version", function() {
-        console.log("Checking Node Version: .")
+        console.log("Checking Node Version: .");
         
-        const packageJson = require("./package.json")
+        const packageJson = require("./package.json");
         const expectedVersion = "v" + packageJson.engines.node;
         
         let actualVersion = process.version;
