@@ -28,7 +28,7 @@
 
     desc("Lint the code");
     task("lint", function() {
-        console.log("Linting Js: .");
+        process.stdout.write("Linting Js: ");
 
         jshint.checkFiles({
             files: "Jakefile.js",
